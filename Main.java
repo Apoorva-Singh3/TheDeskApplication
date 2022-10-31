@@ -102,19 +102,20 @@ public class Main {
     private static void searchExpenses(ArrayList<Integer> arrayList)
     {
         int leng = arrayList.size();  
-      //Sorting the Array before 
+      //Sorting the Array before binarySearch method
         Collections.sort(arrayList);
         
         //Asking for user input
         System.out.println("Enter the expense you need to search:\t"); 
         
-        
+        //Using Scanner Class for reading input
         Scanner sc = new Scanner(System.in);
         int options =  sc.nextInt();       
              
         // Implementing the built-in binarySearch method from collections
         int result = Collections.binarySearch(arrayList, options);
        
+	 //Implementing conditions for output    
         if (result < 0)
             System.out.println("Element not present");
         else
@@ -129,8 +130,13 @@ public class Main {
     private static void sortExpenses(ArrayList<Integer> arrayList)
     {
         int arrlength =  arrayList.size();
+	    
+	//Sorting elements in ascending order in ArrayList
         Collections.sort(arrayList);
+	    
+	//Printing sorted ArrayList
         System.out.println(arrayList+"\n");
+	    
         //ArrayList is the class provided in the Collection framework. 
         //The Collection.sort() function allows sorting a predefined
         //array in an ascending order.
